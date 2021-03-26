@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEVICE=laurel_sprout
+DEVICE=dipper
 cd /tmp/rom # Depends on where source got synced
 rm -rf .repo & # lets remove unnecessary things, so that no storage issue can occur
 
@@ -37,7 +37,7 @@ make_metalava(){
 
 make_rom(){
 	tg_post_msg "<b>EvolutionX CI Build Triggered for " "$DEVICE"</b>" "$CHATID"
-	mka bacon -j16 | tee logs.log
+	mka bacon -j44 | tee logs.log
 	if [ -f out/target/product/$DEVICE/*zip ]; then
 		zip=$(up out/target/product/$DEVICE/*zip)
 		echo " "
