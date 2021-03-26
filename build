@@ -43,13 +43,13 @@ make_metalava(){
 }
 
 make_rom(){
-	tg_post_msg "<b>EvolutionX CI Build Triggered for " "$DEVICE"</b>" "$CHATID"
+	tg_post_msg "<b>EvolutionX CI Build Triggered for " dipper</b>" "$CHATID"
 	mka bacon -j16 | tee logs.log
 	if [ -f out/target/product/$DEVICE/*zip ]; then
 		zip=$(up out/target/product/$DEVICE/*zip)
 		echo " "
 		echo "$zip"
-		tg_post_msg "<b>EvolutionX CI Build Triggered for $DEVICE"</b>" "$CHATID"
+		tg_post_msg "<b>EvolutionX CI Build Triggered for dipper</b>" "$CHATID"
 	else
 		LOGS=$(up logs.log)
 		tg_error_msg "<b>Build Failed, check logs.log file</b>" "$CHATID" "$LOGS"
