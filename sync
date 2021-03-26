@@ -25,5 +25,5 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 git clone $DT_LINK --single-branch -b elle device/$BRAND/$DEVICE
 git clone $CT_LINK --singel-branch -b no-thermal device/xiaomi/sdm845-common
 git clone $VT_LINK --single-branch -b eleven vendor/$BRAND/$DEVICE
-git clone $KT_LINK --single-branch -b no-thermal kernel/$BRAND/$DEVICE
+git clone $KT_LINK --single-branch -b eleven kernel/$BRAND/$DEVICE
 git clone $CVT_LINK --single-branch -b eleven vendor/$BRAND/sdm845-common

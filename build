@@ -42,7 +42,7 @@ make_rom(){
 		zip=$(up out/target/product/$DEVICE/*zip)
 		echo " "
 		echo "$zip"
-		tg_post_msg "<b>Build Completed</b>%0A%0A<b>Link : </b> <code>"$zip"</code>" "$CHATID"
+		tg_post_msg "<b>EvolutionX CI Build Triggered for $DEVICE"</b>" "$CHATID"
 	else
 		tg_post_msg "<b>Build Failed, check cirrus console</b>" "$CHATID"
 	fi

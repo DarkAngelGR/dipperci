@@ -1,22 +1,17 @@
 env: # Environt variable to pass to all tasks
     CIRRUS_CLONE_DEPTH: 1 # No need to clone with whole history
     CIRRUS_WORKING_DIR: "/tmp/ci" # Where to clone repo
-    rclone_config: "ENCRYPTED[cd748227cb60043e7066e426e166988ff5b0fb70341bcb4f661b5c255f19e90f6cb144de4ffdfdd18f201b0028a59b3a]"
-    CHATID: "ENCRYPTED[f74b235c319799d352465933e4171d71162267a08744c81a8c3273a4039aeaeb210ff2e5670df6e22a7e29ed70315f57]"
-    API_BOT: "ENCRYPTED[cb5d10e8b70521505e4141579d4b4042ab702ffba57d0e50051b9c5b7d93c37aa62c914add33fdaf8138e602ddbdbde9]"
+    CHATID: "ENCRYPTED[5142917c4c413040d4d1e2afaf6f8bec3c489a6774d353cb67d3a4fa2eec18378c101b6f7f3a232b204055d28087fefa]"
+    API_BOT: "ENCRYPTED[5e66161d9d21e5bbe31bb3ad78e3b698a2538e795235301f8b6974846a3e93b67341e27e401cd18c792858eab303507e]"
 
 task:
-    name: HemantSachdeva
+    name: DarkAngelGR
     timeout_in: 120m
     container:
       image: apon77/aosp:latest
       cpu: 16
       memory: 24G
-    download_ccache_background_script:
-      - ./download_ccache
     sync_script:
       - ./sync
     build_script:
       - ./build
-    upload_ccache_script:
-      - ./upload_ccache
