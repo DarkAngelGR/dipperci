@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MANIFEST=https://github.com/Evolution-X/manifest.git
+MANIFEST=git://github.com/Evolution-X/manifest.git
 BRANCH=elle
 DEVICE=dipper
 BRAND=xiaomi
